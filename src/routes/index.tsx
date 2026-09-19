@@ -75,7 +75,7 @@ function Index() {
           <section className="wb-bento-stats" aria-label="Erfahrung und Projekte">
             <div className="wb-stats-intro">
               <div className="wb-eyebrow">Leistungen</div>
-              <p>SEO, GEO, CRO &amp; Shopify</p>
+              <p>CRO, Shopify, SEO &amp; GEO</p>
             </div>
             <div className="wb-stat-card">
               <strong>7</strong>
