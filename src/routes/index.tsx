@@ -56,12 +56,8 @@ function Index() {
         <div className="wb-bento-grid">
           <section className="wb-bento-card wb-bento-intro">
             <div className="wb-eyebrow">Freelancer · E-Commerce</div>
-            <h1>
-              William Baitz. Freelancer für <em>Onlineshops.</em>
-            </h1>
-            <p>
-              Ich arbeite selbstständig in den Bereichen SEO, GEO, Conversion-Optimierung und Shopify-Entwicklung.
-            </p>
+            <h1>William Baitz</h1>
+            <p>Freelancer für CRO & Shopify-Entwicklung + Projektmanagement für SEO/GEO</p>
             <div className="wb-intro-edge">
               <span>Selbstständig tätig</span>
               <span>Direkter Ansprechpartner</span>
