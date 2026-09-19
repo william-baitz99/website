@@ -1,11 +1,12 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
-import { Clock3, Github, Linkedin, Mail } from "lucide-react";
+import { Clock3, Github, Linkedin, Mail, Youtube } from "lucide-react";
 import "../william.css";
 
 const portraitPhoto = { url: "/william-baitz-portrait.webp" };
 
 const LINKEDIN = "https://www.linkedin.com/in/william-baitz-06233b196/";
 const GITHUB = "https://github.com/william-baitz99";
+const YOUTUBE = "https://www.youtube.com/@william-baitz-ab-alchemie";
 const EMAIL = "info@william-baitz.de";
 
 export const Route = createFileRoute("/")({
@@ -194,6 +195,7 @@ function Index() {
               <a href={`mailto:${EMAIL}`}><Mail aria-hidden="true" /><span><small>E-Mail</small>{EMAIL}</span></a>
               <a href={LINKEDIN} target="_blank" rel="noopener noreferrer"><Linkedin aria-hidden="true" /><span><small>LinkedIn</small>William Baitz</span></a>
               <a href={GITHUB} target="_blank" rel="noopener noreferrer"><Github aria-hidden="true" /><span><small>GitHub</small>william-baitz99</span></a>
+              <a href={YOUTUBE} target="_blank" rel="noopener noreferrer"><Youtube aria-hidden="true" /><span><small>YouTube</small>William Baitz</span></a>
               <a className="is-placeholder" aria-disabled="true"><Clock3 aria-hidden="true" /><span><small>Calendly</small>Noch einzutragen</span></a>
             </div>
           </section>
@@ -211,6 +213,9 @@ function Index() {
               </a>
               <a href={GITHUB} target="_blank" rel="noopener noreferrer">
                 <Github aria-hidden="true" /> GitHub
+              </a>
+              <a href={YOUTUBE} target="_blank" rel="noopener noreferrer">
+                <Youtube aria-hidden="true" /> YouTube
               </a>
               <Link to="/impressum">Impressum</Link>
               <Link to="/datenschutz">Datenschutz</Link>

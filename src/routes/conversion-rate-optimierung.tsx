@@ -11,11 +11,13 @@ import {
   MessageSquareText,
   Search,
   ShoppingBag,
+  Youtube,
 } from "lucide-react";
 import "../william.css";
 
 const LINKEDIN = "https://www.linkedin.com/in/william-baitz-06233b196/";
 const GITHUB = "https://github.com/william-baitz99";
+const YOUTUBE = "https://www.youtube.com/@william-baitz-ab-alchemie";
 
 const processSteps = [
   {
@@ -271,6 +273,7 @@ function ConversionRateOptimierung() {
               <Link to="/">Startseite</Link>
               <a href={LINKEDIN} target="_blank" rel="noopener noreferrer"><Linkedin aria-hidden="true" /> LinkedIn</a>
               <a href={GITHUB} target="_blank" rel="noopener noreferrer"><Github aria-hidden="true" /> GitHub</a>
+              <a href={YOUTUBE} target="_blank" rel="noopener noreferrer"><Youtube aria-hidden="true" /> YouTube</a>
               <Link to="/impressum">Impressum</Link>
               <Link to="/datenschutz">Datenschutz</Link>
             </div>

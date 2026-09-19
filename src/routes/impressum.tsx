@@ -1,9 +1,10 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
-import { ArrowLeft, Github, Linkedin } from "lucide-react";
+import { ArrowLeft, Github, Linkedin, Youtube } from "lucide-react";
 import "../william.css";
 
 const LINKEDIN = "https://www.linkedin.com/in/william-baitz-06233b196/";
 const GITHUB = "https://github.com/william-baitz99";
+const YOUTUBE = "https://www.youtube.com/@william-baitz-ab-alchemie";
 const EMAIL = "info@william-baitz.de";
 
 export const Route = createFileRoute("/impressum")({
@@ -79,6 +80,11 @@ function Impressum() {
               GitHub:{" "}
               <a href={GITHUB} target="_blank" rel="noopener noreferrer">
                 <Github aria-hidden="true" /> william-baitz99
+              </a>
+              <br />
+              YouTube:{" "}
+              <a href={YOUTUBE} target="_blank" rel="noopener noreferrer">
+                <Youtube aria-hidden="true" /> William Baitz
               </a>
             </p>
           </section>
