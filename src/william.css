@@ -152,6 +152,7 @@
 .wb-diagnosis-form { display: grid; gap: 22px; }
 .wb-field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .wb-diagnosis-form label, .wb-diagnosis-form legend { color: var(--paper); font-size: 13px; font-weight: 600; }
+.wb-diagnosis-form label > small { color: rgba(244, 240, 232, 0.55); font-weight: 400; }
 .wb-diagnosis-form input[type="text"], .wb-diagnosis-form input[type="email"], .wb-diagnosis-form input[type="url"], .wb-diagnosis-form textarea { display: block; width: 100%; margin-top: 9px; border: 1px solid rgba(244, 240, 232, 0.35); border-radius: 0; background: rgba(244, 240, 232, 0.08); padding: 14px 15px; color: var(--paper); font: 400 15px/1.4 "DM Sans", sans-serif; outline: none; }
 .wb-diagnosis-form input::placeholder, .wb-diagnosis-form textarea::placeholder { color: rgba(244, 240, 232, 0.55); }
 .wb-diagnosis-form textarea { resize: vertical; min-height: 130px; }

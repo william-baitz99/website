@@ -146,8 +146,8 @@ function Kontakt() {
                 </div>
               </fieldset>
               <label>
-                Kurze Beschreibung
-                <textarea name="message" rows={5} required maxLength={1500} placeholder="Ausgangslage, Aufgabe und gewünschter Zeitraum" />
+                Kurze Beschreibung <small>(optional)</small>
+                <textarea name="message" rows={5} maxLength={1500} placeholder="Ausgangslage, Aufgabe und gewünschter Zeitraum" />
               </label>
               <label className="wb-consent">
                 <input type="checkbox" required />
