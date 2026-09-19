@@ -52,10 +52,11 @@ function Kontakt() {
     if (!FORM_ENDPOINT) return;
     const form = event.currentTarget;
     const formData = new FormData(form);
+    const rawShopUrl = String(formData.get("shopUrl") ?? "").trim();
     const payload = {
       name: formData.get("name"),
       email: formData.get("email"),
-      shopUrl: formData.get("shopUrl"),
+      shopUrl: rawShopUrl && !/^https?:\/\//i.test(rawShopUrl) ? `https://${rawShopUrl}` : rawShopUrl,
       focus: formData.getAll("focus"),
       message: formData.get("message"),
     };
@@ -134,7 +135,7 @@ function Kontakt() {
               </div>
               <label>
                 Website oder Shop
-                <input name="shopUrl" type="url" inputMode="url" required maxLength={500} placeholder="https://dein-shop.de" />
+                <input name="shopUrl" type="text" inputMode="url" required maxLength={500} placeholder="dein-shop.de" />
               </label>
               <fieldset>
                 <legend>Themenbereich</legend>
