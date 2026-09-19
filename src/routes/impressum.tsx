@@ -51,7 +51,6 @@ function Impressum() {
 
       <main className="wb-legal-main wb-wrap">
         <div className="wb-legal-header">
-          <div className="wb-eyebrow">Rechtliche Angaben</div>
           <h1>Impressum</h1>
         </div>
 

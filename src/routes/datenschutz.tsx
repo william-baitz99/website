@@ -49,7 +49,6 @@ function Datenschutz() {
 
       <main className="wb-legal-main wb-wrap">
         <div className="wb-legal-header">
-          <div className="wb-eyebrow">Datenschutz</div>
           <h1>Datenschutzerklärung</h1>
         </div>
 

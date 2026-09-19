@@ -5,14 +5,12 @@ import {
   BarChart3,
   Check,
   ChevronDown,
-  CircleAlert,
   Eye,
   Github,
   Linkedin,
   MessageSquareText,
   Search,
   ShoppingBag,
-  Sparkles,
 } from "lucide-react";
 import "../william.css";
 
@@ -119,7 +117,6 @@ function ConversionRateOptimierung() {
         </Link>
 
         <section className="wb-cro-hero">
-          <div className="wb-eyebrow">Conversion Rate Optimierung</div>
           <h1>
              Conversion-Optimierung für <em>Shopify-Shops.</em>
           </h1>
@@ -137,7 +134,6 @@ function ConversionRateOptimierung() {
 
         <section className="wb-cro-split" aria-label="Prüffelder und Vorgehen">
           <article className="wb-cro-problem">
-            <div className="wb-eyebrow"><CircleAlert aria-hidden="true" /> Typische Prüffelder</div>
             <h2>Bereiche der Analyse.</h2>
             <ul>
               <li>Produktseiten beantworten wichtige Fragen nicht.</li>
@@ -147,7 +143,6 @@ function ConversionRateOptimierung() {
             </ul>
           </article>
           <article className="wb-cro-solution">
-            <div className="wb-eyebrow"><Sparkles aria-hidden="true" /> Vorgehen</div>
             <h2>Von der Beobachtung zur Änderung.</h2>
             <ul>
               <li><Check aria-hidden="true" /> Beobachtungen und vorhandene Daten zusammenführen</li>
@@ -161,7 +156,6 @@ function ConversionRateOptimierung() {
         <section className="wb-cro-process" aria-labelledby="process-heading">
           <div className="wb-cro-section-heading">
             <div>
-              <div className="wb-eyebrow">Mein Prozess</div>
               <h2 id="process-heading">Von der Diagnose bis zur Umsetzung.</h2>
             </div>
             <p>Die einzelnen Schritte werden je nach Shop, Datenlage und Aufgabenstellung ausgewählt.</p>
@@ -181,7 +175,6 @@ function ConversionRateOptimierung() {
           </ol>
           <aside className="wb-cro-testing">
             <div>
-              <div className="wb-eyebrow">Bei genügend Traffic</div>
               <h3>A/B-Tests als optionaler Arbeitsschritt.</h3>
             </div>
             <p>Bei ausreichender Datengrundlage können Varianten vor einer dauerhaften Änderung mit ABlyft verglichen werden.</p>
@@ -192,7 +185,6 @@ function ConversionRateOptimierung() {
         <section className="wb-cro-references" aria-labelledby="references-heading">
           <div className="wb-cro-section-heading">
             <div>
-              <div className="wb-eyebrow">Referenzen</div>
               <h2 id="references-heading">Vorgesehene Referenzübersicht.</h2>
             </div>
             <p>Die echten Kundenlogos folgen. Bis dahin markieren diese Felder die geplante Referenzfläche.</p>
@@ -207,13 +199,11 @@ function ConversionRateOptimierung() {
         <section className="wb-cro-pricing" aria-labelledby="pricing-heading">
           <div className="wb-cro-section-heading">
             <div>
-              <div className="wb-eyebrow">Zusammenarbeit</div>
               <h2 id="pricing-heading">Formen der Zusammenarbeit.</h2>
             </div>
           </div>
           <div className="wb-cro-pricing-grid">
             <article className="wb-cro-price-card">
-              <div className="wb-eyebrow">Ersteinschätzung</div>
               <h3>Ersteinschätzung</h3>
               <div className="wb-cro-price">Nach Anfrage</div>
               <p>Eine kurze Einordnung der Anfrage und möglicher nächster Schritte.</p>
@@ -225,7 +215,6 @@ function ConversionRateOptimierung() {
               <Link to="/kontakt">Anfrage stellen <ArrowUpRight aria-hidden="true" /></Link>
             </article>
             <article className="wb-cro-price-card is-featured">
-              <div className="wb-eyebrow">Laufende Betreuung</div>
               <h3>CRO Standard</h3>
               <div className="wb-cro-price">ab 750 € <small>/ Monat</small></div>
               <p>Regelmäßige Analyse, Priorisierung und Umsetzung vereinbarter Aufgaben.</p>
@@ -237,7 +226,6 @@ function ConversionRateOptimierung() {
               <Link to="/kontakt">Betreuung anfragen <ArrowUpRight aria-hidden="true" /></Link>
             </article>
             <article className="wb-cro-price-card">
-              <div className="wb-eyebrow">Individueller Bedarf</div>
               <h3>Beratung nach Maß</h3>
               <div className="wb-cro-price">Auf Anfrage</div>
               <p>Für besondere Fragestellungen, größere Vorhaben oder ein individuelles Setup.</p>
@@ -254,7 +242,6 @@ function ConversionRateOptimierung() {
         <section className="wb-cro-faq" aria-labelledby="faq-heading">
           <div className="wb-cro-section-heading">
             <div>
-              <div className="wb-eyebrow">FAQ</div>
               <h2 id="faq-heading">Häufige Fragen.</h2>
             </div>
           </div>
@@ -269,7 +256,6 @@ function ConversionRateOptimierung() {
         </section>
 
         <section className="wb-cro-final-cta">
-          <div className="wb-eyebrow">Kontakt</div>
           <h2>CRO-Projekt besprechen.</h2>
           <Link to="/kontakt" aria-label="CRO-Projekt anfragen">
             Anfrage stellen <ArrowUpRight aria-hidden="true" />

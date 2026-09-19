@@ -95,7 +95,6 @@ function Kontakt() {
       <main className="wb-contact-main wb-wrap">
         <section className="wb-contact-top" aria-label="Kontakt">
           <div className="wb-contact-top-copy">
-            <div className="wb-eyebrow">Kontakt</div>
             <h1>
               Anfrage zu einem <em>E-Commerce-Projekt.</em>
             </h1>
@@ -118,7 +117,6 @@ function Kontakt() {
                 height={96}
               />
               <div>
-                <div className="wb-eyebrow">Anfrage</div>
                 <h2 id="diagnose-form-heading">Worum geht es?</h2>
               </div>
             </div>
@@ -184,11 +182,9 @@ function Kontakt() {
           <aside className="wb-contact-sidebar">
             <div className="wb-next-step">
               <span className="wb-step-number">02</span>
-              <div className="wb-eyebrow">Ersteinschätzung</div>
               <h2>Bei Bedarf antworte ich mit einem kurzen Loom-Video.</h2>
             </div>
             <div className="wb-direct-contact">
-              <div className="wb-eyebrow">Direkter Kontakt</div>
               <a href={`mailto:${EMAIL}`}><Mail aria-hidden="true" /><span><small>E-Mail</small>{EMAIL}</span></a>
               <a href={LINKEDIN} target="_blank" rel="noopener noreferrer"><Linkedin aria-hidden="true" /><span><small>LinkedIn</small>William Baitz</span></a>
               <a href={GITHUB} target="_blank" rel="noopener noreferrer"><Github aria-hidden="true" /><span><small>GitHub</small>william-baitz99</span></a>

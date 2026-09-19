@@ -5,15 +5,11 @@ import {
   Blocks,
   Check,
   ChevronDown,
-  CircleAlert,
   Code2,
   Gauge,
   Github,
   LayoutTemplate,
   Linkedin,
-  Plug,
-  Sparkles,
-  Wrench,
 } from "lucide-react";
 import "../william.css";
 
@@ -120,7 +116,6 @@ function ShopifyEntwicklung() {
         </Link>
 
         <section className="wb-cro-hero wb-shopify-hero">
-          <div className="wb-eyebrow">Shopify Entwicklung</div>
           <h1>
             Entwicklung und Pflege von <em>Shopify-Shops.</em>
           </h1>
@@ -144,7 +139,6 @@ function ShopifyEntwicklung() {
 
         <section className="wb-cro-split" aria-label="Typische Aufgaben und Vorgehen">
           <article className="wb-cro-problem">
-            <div className="wb-eyebrow"><CircleAlert aria-hidden="true" /> Typische Aufgaben</div>
             <h2>Arbeiten am bestehenden Shop.</h2>
             <ul>
               <li>Wichtige Inhalte lassen sich nicht flexibel pflegen.</li>
@@ -154,7 +148,6 @@ function ShopifyEntwicklung() {
             </ul>
           </article>
           <article className="wb-cro-solution">
-            <div className="wb-eyebrow"><Sparkles aria-hidden="true" /> Vorgehen</div>
             <h2>Prüfen, abstimmen und umsetzen.</h2>
             <ul>
               <li><Check aria-hidden="true" /> Anforderungen vor der Umsetzung priorisieren</li>
@@ -168,7 +161,6 @@ function ShopifyEntwicklung() {
         <section className="wb-cro-process" aria-labelledby="shopify-process-heading">
           <div className="wb-cro-section-heading">
             <div>
-              <div className="wb-eyebrow">Mein Ablauf</div>
               <h2 id="shopify-process-heading">Ablauf eines Projekts.</h2>
             </div>
             <p>Der genaue Ablauf richtet sich nach Theme, Aufgabe und bestehender technischer Struktur.</p>
@@ -191,13 +183,11 @@ function ShopifyEntwicklung() {
         <section className="wb-cro-pricing" aria-labelledby="shopify-pricing-heading">
           <div className="wb-cro-section-heading">
             <div>
-              <div className="wb-eyebrow">Zusammenarbeit</div>
               <h2 id="shopify-pricing-heading">Formen der Zusammenarbeit.</h2>
             </div>
           </div>
           <div className="wb-cro-pricing-grid">
             <article className="wb-cro-price-card">
-              <div className="wb-eyebrow">Ersteinschätzung</div>
               <h3>Ersteinschätzung</h3>
               <div className="wb-cro-price">Nach Anfrage</div>
               <p>Eine kurze Einordnung der Anfrage und möglicher nächster Schritte.</p>
@@ -209,7 +199,6 @@ function ShopifyEntwicklung() {
               <Link to="/kontakt">Anfrage stellen <ArrowUpRight aria-hidden="true" /></Link>
             </article>
             <article className="wb-cro-price-card is-featured">
-              <div className="wb-eyebrow">Laufende Betreuung</div>
               <h3>Shopify Standard</h3>
               <div className="wb-cro-price">ab 750 € <small>/ Monat</small></div>
               <p>Regelmäßige Weiterentwicklung und technische Pflege eines Shopify-Shops.</p>
@@ -221,7 +210,6 @@ function ShopifyEntwicklung() {
               <Link to="/kontakt">Betreuung anfragen <ArrowUpRight aria-hidden="true" /></Link>
             </article>
             <article className="wb-cro-price-card">
-              <div className="wb-eyebrow">Individueller Bedarf</div>
               <h3>Beratung nach Maß</h3>
               <div className="wb-cro-price">Auf Anfrage</div>
               <p>Für besondere Fragestellungen, größere Vorhaben oder ein individuelles Shopify-Setup.</p>
@@ -238,7 +226,6 @@ function ShopifyEntwicklung() {
         <section className="wb-cro-faq" aria-labelledby="shopify-faq-heading">
           <div className="wb-cro-section-heading">
             <div>
-              <div className="wb-eyebrow">FAQ</div>
               <h2 id="shopify-faq-heading">Häufige Fragen.</h2>
             </div>
           </div>
@@ -253,7 +240,6 @@ function ShopifyEntwicklung() {
         </section>
 
         <section className="wb-cro-final-cta wb-shopify-final-cta">
-          <div className="wb-eyebrow">Kontakt</div>
           <h2>Shopify-Projekt besprechen.</h2>
           <Link to="/kontakt" aria-label="Shopify-Projekt anfragen">
             Anfrage stellen <ArrowUpRight aria-hidden="true" />
