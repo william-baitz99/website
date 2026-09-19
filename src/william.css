@@ -1,0 +1,374 @@
+/* William Baitz – Bento-Version */
+.wb-page {
+  --ink: #17221d;
+  --paper: #f4f0e8;
+  --soft: #e4ded2;
+  --pine: #315b46;
+  --lime: #d4e65a;
+  --rose: #d87259;
+  --line: rgba(23, 34, 29, 0.2);
+  color: var(--ink);
+  background: var(--paper);
+  font-family: "DM Sans", Arial, sans-serif;
+  overflow: hidden;
+  min-height: 100vh;
+}
+.wb-page * { box-sizing: border-box; }
+.wb-page a { color: inherit; text-decoration: none; }
+.wb-wrap { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
+.wb-eyebrow { display: flex; gap: 10px; align-items: center; color: inherit; font: 500 11px/1 "DM Mono", monospace; letter-spacing: 0.04em; }
+.wb-eyebrow::before { width: 8px; height: 8px; border-radius: 50%; background: var(--lime); content: ""; }
+
+.wb-header { position: relative; z-index: 2; border-bottom: 1px solid var(--line); }
+.wb-nav { display: flex; justify-content: space-between; align-items: center; min-height: 78px; }
+.wb-logo { display: grid; grid-template-columns: 30px auto; align-items: center; gap: 9px; font: 500 14px/1 "DM Mono", monospace; letter-spacing: -0.04em; }
+.wb-nav-cta { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border: 1px solid var(--line); border-radius: 999px; font: 500 13px/1 "DM Sans", sans-serif; letter-spacing: -0.02em; transition: background 0.2s ease, color 0.2s ease; }
+.wb-nav-cta:hover { color: var(--paper); background: var(--ink); }
+.wb-nav-cta span { font-size: 12px; }
+.wb-logo-mark { display: grid; place-items: center; width: 30px; aspect-ratio: 1; color: var(--paper); background: var(--ink); font: 500 11px/1 "DM Mono", monospace; }
+.wb-back-link { display: inline-flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 500; }
+.wb-back-link svg { width: 15px; }
+
+.wb-bento { padding: 28px 0 54px; }
+.wb-bento-grid { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: minmax(146px, auto); gap: 14px; }
+.wb-bento-card { position: relative; display: flex; flex-direction: column; min-height: 100%; padding: 29px; overflow: hidden; }
+.wb-bento-card h1, .wb-bento-card h2, .wb-bento-card h3, .wb-bento-card p { position: relative; z-index: 1; margin-top: 0; }
+.wb-bento-card .wb-eyebrow { margin-bottom: auto; }
+.wb-bento-card .wb-eyebrow::before { background: currentColor; }
+
+.wb-bento-intro { grid-column: span 8; min-height: 454px; color: var(--paper); background: var(--ink); }
+.wb-bento-intro h1 { max-width: 720px; margin: 26px 0 18px; color: var(--paper); font: 400 clamp(60px, 7.8vw, 108px)/0.86 "Instrument Serif", Georgia, serif; letter-spacing: -0.058em; }
+.wb-bento-intro h1 em { color: var(--lime); font-style: italic; }
+.wb-bento-intro p { max-width: 500px; margin-bottom: 0; color: rgba(244, 240, 232, 0.76); font-size: 17px; line-height: 1.45; }
+.wb-intro-edge { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.wb-intro-edge span { padding: 8px 14px; border: 1px solid rgba(244, 240, 232, 0.28); border-radius: 999px; color: rgba(244, 240, 232, 0.92); font: 500 12px/1 "DM Sans", sans-serif; letter-spacing: -0.01em; }
+.wb-intro-symbol { position: absolute; right: -37px; bottom: -69px; color: var(--pine); font: 400 330px/0.7 "Instrument Serif", Georgia, serif; letter-spacing: -0.17em; }
+
+.wb-bento-profile { grid-column: span 4; min-height: 454px; color: var(--paper); background: var(--pine); }
+.wb-portrait-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 36%; }
+.wb-bento-profile::after { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(23, 34, 29, 0.08) 32%, rgba(23, 34, 29, 0.76) 100%); content: ""; }
+.wb-bento-profile .wb-profile-name-box, .wb-bento-profile .wb-profile-meta { position: relative; z-index: 1; }
+.wb-profile-name-box { width: fit-content; margin: auto 0 14px; padding: 12px 16px; color: var(--ink); background: var(--paper); font: 500 18px/1 "DM Sans", sans-serif; letter-spacing: -0.02em; }
+.wb-profile-meta { margin: 0; color: var(--paper); font: 500 11px/1.4 "DM Mono", monospace; letter-spacing: 0.04em; }
+
+.wb-bento-service { min-height: 318px; transition: transform 0.25s ease; }
+.wb-bento-service:hover { transform: translateY(-4px); }
+.wb-bento-service h2 { max-width: 360px; margin: auto 0 15px; font: 400 48px/0.96 "Instrument Serif", Georgia, serif; letter-spacing: -0.04em; }
+.wb-bento-service p { max-width: 315px; margin: 0; font-size: 15px; line-height: 1.48; }
+.wb-bento-service .wb-card-arrow { position: absolute; top: 28px; right: 29px; display: grid; place-items: center; width: 31px; aspect-ratio: 1; border-radius: 50%; font-size: 18px; }
+.wb-card-illustration { position: absolute; right: 24px; bottom: 24px; z-index: 0; width: 150px; height: 108px; object-fit: contain; }
+
+.wb-service-cro p { max-width: 56%; }
+.wb-service-shopify h2 { max-width: 63%; }
+.wb-service-shopify p { max-width: 54%; }
+.wb-service-cro { grid-column: span 5; color: var(--ink); background: var(--lime); }
+.wb-service-cro .wb-card-arrow { color: var(--paper); background: var(--ink); }
+.wb-service-shopify { grid-column: span 4; color: var(--paper); background: var(--rose); }
+.wb-service-shopify .wb-card-arrow { color: var(--ink); background: var(--paper); }
+.wb-service-wolf { grid-column: span 3; color: var(--ink); background: var(--soft); }
+.wb-service-wolf h2 { max-width: 100%; }
+.wb-service-wolf p { max-width: calc(100% - 118px); }
+.wb-service-wolf .wb-card-illustration { width: 108px; height: 82px; }
+.wb-service-wolf .wb-card-arrow { color: var(--paper); background: var(--pine); }
+
+.wb-bento-shop { grid-column: span 7; min-height: 372px; color: var(--paper); background: var(--pine); }
+.wb-bento-shop h2 { max-width: calc(100% - 210px); margin: auto 0 14px; font: 400 clamp(44px, 5vw, 70px)/0.9 "Instrument Serif", Georgia, serif; letter-spacing: -0.05em; }
+.wb-bento-shop h2 em { color: var(--lime); font-style: italic; }
+.wb-bento-shop p { max-width: calc(100% - 210px); margin: 0; color: rgba(244, 240, 232, 0.78); font-size: 15px; line-height: 1.48; }
+.wb-shop-illustration { right: 24px; bottom: 22px; width: 178px; height: 138px; max-height: none; }
+
+.wb-bento-about { grid-column: span 5; min-height: 372px; background: #eee9df; }
+.wb-bento-about h2 { margin: 23px 0 22px; font: 400 clamp(44px, 5vw, 70px)/0.9 "Instrument Serif", Georgia, serif; letter-spacing: -0.05em; }
+.wb-timeline { position: relative; margin: 0; padding: 0; list-style: none; }
+.wb-timeline::before { position: absolute; top: 7px; bottom: 7px; left: 5px; width: 1px; background: var(--line); content: ""; }
+.wb-timeline li { position: relative; display: flex; gap: 16px; padding: 0 0 18px 0; }
+.wb-timeline li:last-child { padding-bottom: 0; }
+.wb-timeline-dot { flex-shrink: 0; width: 11px; height: 11px; margin-top: 5px; border-radius: 50%; background: var(--pine); }
+.wb-timeline li:nth-child(2) .wb-timeline-dot { background: var(--rose); }
+.wb-timeline li:nth-child(3) .wb-timeline-dot { background: var(--ink); }
+.wb-timeline li:nth-child(4) .wb-timeline-dot { background: var(--lime); }
+.wb-timeline strong { display: block; margin-bottom: 4px; font: 500 15px/1.2 "DM Sans", sans-serif; letter-spacing: -0.01em; }
+.wb-timeline span { display: block; color: rgba(23, 34, 29, 0.72); font-size: 14px; line-height: 1.4; }
+
+.wb-bento-contact { grid-column: span 12; min-height: 278px; color: var(--ink); background: var(--paper); border: 1px solid var(--line); }
+.wb-bento-contact h2 { max-width: 760px; margin: auto 0 0; font: 400 clamp(46px, 6vw, 76px)/0.9 "Instrument Serif", Georgia, serif; letter-spacing: -0.055em; }
+.wb-bento-contact h2 em { color: var(--pine); font-style: italic; }
+.wb-bento-contact .wb-contact-button { position: absolute; right: 31px; bottom: 30px; display: grid; place-items: center; width: 115px; aspect-ratio: 1; border-radius: 50%; color: var(--paper); background: var(--ink); transition: transform 0.2s ease; }
+.wb-bento-contact .wb-contact-button:hover { transform: rotate(-10deg); }
+
+.wb-bento-stats { grid-column: span 12; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.wb-stats-intro { grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 2px 2px 0; }
+.wb-stats-intro p { margin: 0; color: var(--pine); font: 400 30px/1 "Instrument Serif", Georgia, serif; }
+.wb-stat-card { display: grid; place-items: center; min-height: 120px; padding: 18px; color: var(--paper); background: var(--ink); text-align: center; }
+.wb-stat-card strong { color: var(--lime); font: 500 clamp(42px, 4vw, 58px)/1 "DM Sans", sans-serif; letter-spacing: -0.06em; }
+.wb-stat-card span { margin-top: 5px; font-size: 14px; }
+
+.wb-bento-blog { grid-column: span 8; min-height: 336px; color: var(--paper); background: var(--ink); }
+.wb-bento-blog h2 { max-width: 420px; margin: 23px 0 24px; font: 400 51px/0.94 "Instrument Serif", Georgia, serif; letter-spacing: -0.045em; }
+.wb-bento-blog h2 em { color: var(--lime); font-style: italic; }
+.wb-post-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.wb-post { min-height: 103px; padding: 15px; color: var(--ink); background: var(--paper); }
+.wb-post small { display: block; margin-bottom: 11px; color: var(--pine); font: 500 10px/1 "DM Mono", monospace; letter-spacing: 0.04em; }
+.wb-post span { display: block; font: 400 22px/1 "Instrument Serif", Georgia, serif; }
+
+.wb-bento-direct { grid-column: span 4; min-height: 336px; color: var(--paper); background: var(--ink); }
+.wb-bento-direct .wb-eyebrow::before { background: var(--lime); }
+.wb-bento-direct h2 { max-width: 320px; margin: 24px 0 20px; font: 400 38px/0.96 "Instrument Serif", Georgia, serif; letter-spacing: -0.04em; }
+.wb-home-contact-list { display: grid; grid-template-columns: 1fr; margin-top: auto; }
+.wb-home-contact-list > a { display: flex; gap: 12px; align-items: center; min-width: 0; padding: 12px 0; border-top: 1px solid rgba(244, 240, 232, 0.22); }
+.wb-home-contact-list > a svg { flex: 0 0 18px; width: 18px; color: var(--lime); }
+.wb-home-contact-list > a span { display: grid; gap: 3px; min-width: 0; font-size: 13px; }
+.wb-home-contact-list small { color: rgba(244, 240, 232, 0.58); font: 400 10px/1 "DM Mono", monospace; }
+.wb-home-contact-list .is-placeholder { cursor: default; color: rgba(244, 240, 232, 0.52); }
+
+.wb-bento-analysis { grid-column: span 8; min-height: 336px; color: var(--paper); background: var(--pine); }
+.wb-bento-analysis h2 { max-width: 520px; margin: auto 0 12px; font: 400 58px/0.94 "Instrument Serif", Georgia, serif; letter-spacing: -0.04em; }
+.wb-bento-analysis p { max-width: 480px; margin: 0; color: rgba(244, 240, 232, 0.8); font-size: 15px; line-height: 1.45; }
+.wb-analysis-link { margin-top: 24px; color: var(--lime); font-size: 15px; font-weight: 600; position: relative; z-index: 1; }
+.wb-analysis-mark { position: absolute; right: 21px; bottom: 19px; color: rgba(212, 230, 90, 0.32); font: 400 112px/0.7 "Instrument Serif", Georgia, serif; }
+
+.wb-footer .wb-footer-bottom { display: flex; justify-content: space-between; gap: 20px; padding: 20px 0 30px; border-top: 1px solid var(--line); color: rgba(23, 34, 29, 0.67); font: 400 11px/1.4 "DM Mono", monospace; }
+.wb-footer .wb-footer-bottom div { display: flex; gap: 18px; }
+
+/* Kontakt & Shop-Diagnose */
+.wb-contact-main { padding: 18px 0 54px; }
+.wb-contact-top { display: flex; justify-content: space-between; align-items: flex-end; gap: 28px; padding: 28px 32px 26px; margin-bottom: 14px; border: 1px solid var(--line); background: var(--paper); }
+.wb-contact-top-copy { max-width: 680px; }
+.wb-contact-top-copy .wb-eyebrow { margin-bottom: 10px; }
+.wb-contact-top h1 { margin: 0; font: 400 clamp(34px, 4.2vw, 58px)/0.95 "Instrument Serif", Georgia, serif; letter-spacing: -0.05em; }
+.wb-contact-top h1 em { color: var(--pine); font-style: italic; }
+.wb-diagnosis-facts { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.wb-diagnosis-facts li { display: inline-flex; align-items: center; gap: 7px; padding: 8px 12px; border: 1px solid var(--line); font-size: 12px; }
+.wb-diagnosis-facts svg { width: 14px; color: var(--pine); }
+.wb-contact-content { display: grid; grid-template-columns: minmax(0, 2fr) minmax(300px, 1fr); gap: 14px; margin-top: 14px; align-items: start; }
+.wb-diagnosis-form-wrap { padding: 34px 42px 42px; color: var(--paper); background: var(--pine); }
+.wb-form-heading { display: flex; gap: 20px; align-items: center; margin-bottom: 28px; }
+.wb-form-avatar { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; object-position: 50% 36%; border: 2px solid var(--paper); }
+.wb-form-heading .wb-eyebrow::before { background: var(--lime); }
+.wb-step-number { color: var(--lime); font: 500 13px/1 "DM Mono", monospace; }
+.wb-form-heading h2 { margin: 10px 0 0; font: 400 clamp(34px, 4vw, 54px)/0.95 "Instrument Serif", Georgia, serif; letter-spacing: -0.045em; }
+.wb-diagnosis-form { display: grid; gap: 22px; }
+.wb-field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.wb-diagnosis-form label, .wb-diagnosis-form legend { color: var(--paper); font-size: 13px; font-weight: 600; }
+.wb-diagnosis-form input[type="text"], .wb-diagnosis-form input[type="email"], .wb-diagnosis-form input[type="url"], .wb-diagnosis-form textarea { display: block; width: 100%; margin-top: 9px; border: 1px solid rgba(244, 240, 232, 0.35); border-radius: 0; background: rgba(244, 240, 232, 0.08); padding: 14px 15px; color: var(--paper); font: 400 15px/1.4 "DM Sans", sans-serif; outline: none; }
+.wb-diagnosis-form input::placeholder, .wb-diagnosis-form textarea::placeholder { color: rgba(244, 240, 232, 0.55); }
+.wb-diagnosis-form textarea { resize: vertical; min-height: 130px; }
+.wb-diagnosis-form input:focus, .wb-diagnosis-form textarea:focus { border-color: var(--lime); box-shadow: 0 0 0 1px var(--lime); background: rgba(244, 240, 232, 0.12); }
+.wb-diagnosis-form fieldset { margin: 0; padding: 0; border: 0; }
+.wb-focus-options { display: flex; gap: 9px; margin-top: 10px; }
+.wb-focus-options label { cursor: pointer; }
+.wb-focus-options input { position: absolute; opacity: 0; }
+.wb-focus-options span { display: block; padding: 9px 14px; border: 1px solid rgba(244, 240, 232, 0.35); background: transparent; }
+.wb-focus-options input:checked + span { color: var(--ink); background: var(--lime); border-color: var(--lime); }
+.wb-consent { display: flex; gap: 10px; align-items: flex-start; font-weight: 400 !important; line-height: 1.45; }
+.wb-consent input { margin-top: 3px; accent-color: var(--lime); }
+.wb-submit-button { width: fit-content; height: 52px; border-radius: 0; padding: 0 24px; color: var(--ink); background: var(--lime); box-shadow: none; }
+.wb-submit-button:hover { background: var(--paper); }
+.wb-form-note { margin: -10px 0 0; color: rgba(244, 240, 232, 0.65); font-size: 12px; }
+.wb-contact-sidebar { display: grid; gap: 14px; }
+.wb-next-step { min-height: 340px; padding: 34px; color: var(--ink); background: var(--soft); }
+.wb-next-step .wb-step-number { float: right; color: var(--pine); }
+.wb-next-step .wb-eyebrow::before { background: var(--pine); }
+.wb-next-step h2 { margin: 78px 0 0; font: 400 44px/0.95 "Instrument Serif", Georgia, serif; letter-spacing: -0.04em; }
+.wb-direct-contact { padding: 32px 34px; border: 1px solid var(--line); background: var(--paper); }
+.wb-direct-contact .wb-eyebrow { margin-bottom: 22px; }
+.wb-direct-contact > a { display: flex; gap: 14px; align-items: center; padding: 14px 0; border-top: 1px solid var(--line); }
+.wb-direct-contact > a svg { width: 19px; color: var(--pine); }
+.wb-direct-contact > a span { display: grid; gap: 3px; font-size: 14px; }
+.wb-direct-contact small { color: rgba(23, 34, 29, 0.62); font: 400 10px/1 "DM Mono", monospace; }
+.wb-direct-contact .is-placeholder { cursor: default; color: rgba(23, 34, 29, 0.55); }
+
+/* Conversion Rate Optimierung */
+.wb-cro-main { padding: 22px 0 64px; }
+.wb-cro-back { margin: 0 0 20px; }
+.wb-cro-hero { position: relative; min-height: 490px; padding: 48px; overflow: hidden; color: var(--paper); background: var(--ink); }
+.wb-cro-hero .wb-eyebrow::before { background: var(--lime); }
+.wb-cro-hero h1 { max-width: 880px; margin: 76px 0 22px; color: var(--paper); font: 400 clamp(58px, 7vw, 94px)/0.88 "Instrument Serif", Georgia, serif; letter-spacing: -0.055em; }
+.wb-cro-hero h1 em { color: var(--lime); font-style: italic; }
+.wb-cro-hero > p { max-width: 620px; margin: 0; color: rgba(244, 240, 232, 0.76); font-size: 18px; line-height: 1.5; }
+.wb-cro-hero-actions { position: relative; z-index: 1; display: flex; align-items: center; gap: 20px; margin-top: 34px; }
+.wb-cro-primary-link { display: inline-flex; align-items: center; gap: 9px; min-height: 50px; padding: 0 20px; color: var(--ink) !important; background: var(--lime); font-size: 14px; font-weight: 600; }
+.wb-cro-primary-link:hover { background: var(--paper); }
+.wb-cro-primary-link svg { width: 18px; }
+.wb-cro-hero-actions > span { color: rgba(244, 240, 232, 0.68); font: 400 11px/1.4 "DM Mono", monospace; }
+.wb-cro-hero-mark { position: absolute; right: 22px; bottom: -58px; color: var(--pine); font: 400 300px/0.75 "Instrument Serif", Georgia, serif; }
+
+.wb-cro-split { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
+.wb-cro-problem, .wb-cro-solution { min-height: 425px; padding: 38px; }
+.wb-cro-problem { color: var(--paper); background: var(--rose); }
+.wb-cro-solution { color: var(--ink); background: var(--lime); }
+.wb-cro-problem .wb-eyebrow svg, .wb-cro-solution .wb-eyebrow svg { width: 15px; }
+.wb-cro-problem .wb-eyebrow::before, .wb-cro-solution .wb-eyebrow::before { display: none; }
+.wb-cro-problem h2, .wb-cro-solution h2 { max-width: 470px; margin: 78px 0 25px; font: 400 clamp(40px, 4.3vw, 60px)/0.94 "Instrument Serif", Georgia, serif; letter-spacing: -0.045em; }
+.wb-cro-problem ul, .wb-cro-solution ul { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.wb-cro-problem li { padding-left: 17px; border-left: 2px solid rgba(244, 240, 232, 0.55); font-size: 15px; line-height: 1.45; }
+.wb-cro-solution li { display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.45; }
+.wb-cro-solution li svg { flex: 0 0 17px; width: 17px; margin-top: 2px; }
+
+.wb-cro-process, .wb-cro-references, .wb-cro-pricing, .wb-cro-faq { padding: 76px 0; border-bottom: 1px solid var(--line); }
+.wb-cro-section-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; margin-bottom: 38px; }
+.wb-cro-section-heading h2 { max-width: 720px; margin: 19px 0 0; font: 400 clamp(46px, 5vw, 70px)/0.92 "Instrument Serif", Georgia, serif; letter-spacing: -0.05em; }
+.wb-cro-section-heading > p { max-width: 380px; margin: 0; color: rgba(23, 34, 29, 0.7); font-size: 15px; line-height: 1.55; }
+.wb-cro-process-grid { display: grid; grid-template-columns: repeat(5, 1fr); margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.wb-cro-process-grid li { position: relative; min-height: 285px; padding: 25px 22px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.wb-cro-process-number { display: block; color: var(--pine); font: 500 11px/1 "DM Mono", monospace; }
+.wb-cro-process-grid li > svg { width: 27px; height: 27px; margin: 46px 0 23px; color: var(--rose); stroke-width: 1.5; }
+.wb-cro-process-grid h3 { margin: 0 0 11px; font: 400 27px/1 "Instrument Serif", Georgia, serif; }
+.wb-cro-process-grid p { margin: 0; color: rgba(23, 34, 29, 0.68); font-size: 13px; line-height: 1.5; }
+.wb-cro-testing { display: grid; grid-template-columns: 1.2fr 1fr auto; gap: 34px; align-items: end; margin-top: 14px; padding: 34px; color: var(--paper); background: var(--pine); }
+.wb-cro-testing .wb-eyebrow::before { background: var(--lime); }
+.wb-cro-testing h3 { max-width: 520px; margin: 15px 0 0; font: 400 39px/0.98 "Instrument Serif", Georgia, serif; }
+.wb-cro-testing p { margin: 0; color: rgba(244, 240, 232, 0.75); font-size: 14px; line-height: 1.5; }
+.wb-cro-testing > span { padding: 12px 15px; color: var(--ink); background: var(--lime); font: 500 13px/1 "DM Mono", monospace; }
+
+.wb-cro-logo-grid { display: grid; grid-template-columns: repeat(5, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.wb-cro-logo-grid > div { display: grid; place-items: center; min-height: 124px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); color: rgba(23, 34, 29, 0.55); font: 500 14px/1 "DM Mono", monospace; }
+.wb-cro-logo-grid span { display: block; margin-bottom: 8px; color: var(--rose); font-size: 10px; }
+
+.wb-cro-pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; align-items: stretch; }
+.wb-cro-price-card { position: relative; display: flex; flex-direction: column; min-height: 510px; padding: 30px; border: 1px solid var(--line); background: var(--paper); }
+.wb-cro-price-card.is-featured { color: var(--paper); background: var(--pine); border-color: var(--pine); }
+.wb-cro-price-card.is-featured .wb-eyebrow::before { background: var(--lime); }
+.wb-cro-price-label { position: absolute; top: 0; right: 0; padding: 9px 12px; color: var(--ink); background: var(--lime); font: 500 10px/1 "DM Mono", monospace; text-transform: uppercase; }
+.wb-cro-price-card h3 { margin: 54px 0 12px; font: 400 39px/1 "Instrument Serif", Georgia, serif; }
+.wb-cro-price { font-size: 26px; font-weight: 600; }
+.wb-cro-price small { font-size: 13px; font-weight: 400; }
+.wb-cro-price-card > p { min-height: 68px; margin: 20px 0; color: rgba(23, 34, 29, 0.68); font-size: 14px; line-height: 1.5; }
+.wb-cro-price-card.is-featured > p { color: rgba(244, 240, 232, 0.74); }
+.wb-cro-price-card ul { display: grid; gap: 10px; margin: 0 0 30px; padding: 20px 0 0; border-top: 1px solid var(--line); list-style: none; }
+.wb-cro-price-card.is-featured ul { border-color: rgba(244, 240, 232, 0.22); }
+.wb-cro-price-card li { display: flex; gap: 9px; font-size: 13px; line-height: 1.4; }
+.wb-cro-price-card li svg { flex: 0 0 16px; width: 16px; color: var(--rose); }
+.wb-cro-price-card.is-featured li svg { color: var(--lime); }
+.wb-cro-price-card > a { display: flex; justify-content: space-between; align-items: center; min-height: 50px; margin-top: auto; padding: 0 16px; color: var(--paper); background: var(--ink); font-size: 13px; font-weight: 600; }
+.wb-cro-price-card.is-featured > a { color: var(--ink); background: var(--lime); }
+.wb-cro-price-card > a svg { width: 17px; }
+
+.wb-cro-faq-list { border-top: 1px solid var(--line); }
+.wb-cro-faq details { border-bottom: 1px solid var(--line); }
+.wb-cro-faq summary { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 25px 3px; cursor: pointer; font-size: 17px; font-weight: 600; list-style: none; }
+.wb-cro-faq summary::-webkit-details-marker { display: none; }
+.wb-cro-faq summary svg { flex: 0 0 19px; width: 19px; transition: transform 0.2s ease; }
+.wb-cro-faq details[open] summary svg { transform: rotate(180deg); }
+.wb-cro-faq details p { max-width: 760px; margin: -8px 0 25px; color: rgba(23, 34, 29, 0.7); font-size: 15px; line-height: 1.6; }
+
+.wb-cro-final-cta { position: relative; min-height: 320px; margin-top: 14px; padding: 40px; overflow: hidden; color: var(--paper); background: var(--ink); }
+.wb-cro-final-cta .wb-eyebrow::before { background: var(--lime); }
+.wb-cro-final-cta h2 { max-width: 720px; margin: 74px 150px 0 0; font: 400 clamp(46px, 5.5vw, 72px)/0.9 "Instrument Serif", Georgia, serif; letter-spacing: -0.05em; }
+.wb-cro-final-cta > a { position: absolute; right: 38px; bottom: 38px; display: grid; place-items: center; width: 120px; aspect-ratio: 1; padding: 20px; border-radius: 50%; color: var(--ink); background: var(--lime); font-size: 13px; font-weight: 600; text-align: center; }
+.wb-cro-final-cta > a svg { width: 18px; }
+
+/* Shopify Entwicklung */
+.wb-shopify-hero { background: var(--ink); }
+.wb-shopify-hero-logo { position: absolute; right: 28px; bottom: 28px; width: clamp(140px, 16vw, 220px); height: clamp(140px, 16vw, 220px); color: rgba(244, 240, 232, 0.92); }
+.wb-shopify-hero .wb-cro-primary-link { color: var(--ink) !important; background: var(--lime); }
+.wb-shopify-hero .wb-cro-primary-link:hover { background: var(--paper); }
+.wb-shopify-page .wb-cro-process-grid li > svg { color: var(--pine); }
+.wb-shopify-final-cta > a { background: var(--rose); }
+
+/* Rechtliche Seiten */
+.wb-legal-page { background: var(--paper); }
+.wb-legal-main { padding: 28px 0 64px; }
+.wb-legal-header { max-width: 720px; margin-bottom: 28px; }
+.wb-legal-header .wb-eyebrow { margin-bottom: 12px; }
+.wb-legal-header h1 { margin: 0; font: 400 clamp(46px, 5.5vw, 76px)/0.92 "Instrument Serif", Georgia, serif; letter-spacing: -0.05em; }
+.wb-legal-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.wb-legal-card { padding: 34px; border: 1px solid var(--line); background: var(--paper); }
+.wb-legal-card.wb-legal-full { grid-column: 1 / -1; }
+.wb-legal-card h2 { margin: 0 0 16px; font: 400 30px/1 "Instrument Serif", Georgia, serif; letter-spacing: -0.03em; }
+.wb-legal-card p { margin: 0; color: rgba(23, 34, 29, 0.78); font-size: 15px; line-height: 1.6; }
+.wb-legal-card a { color: var(--pine); text-decoration: underline; text-underline-offset: 3px; }
+.wb-legal-placeholder { color: rgba(23, 34, 29, 0.5); font-style: italic; }
+
+@media (max-width: 760px) {
+  .wb-wrap { width: min(100% - 32px, 1180px); }
+  .wb-nav { min-height: 64px; }
+  .wb-nav-cta { padding: 8px 12px; font-size: 12px; }
+  .wb-bento { padding-top: 16px; }
+  .wb-bento-grid { grid-template-columns: 1fr; grid-auto-rows: auto; gap: 10px; }
+  .wb-bento-card, .wb-bento-intro, .wb-bento-profile, .wb-bento-service, .wb-bento-shop, .wb-bento-about, .wb-bento-contact { grid-column: 1; min-height: 310px; padding: 24px; }
+  .wb-bento-intro { min-height: 410px; }
+  .wb-bento-intro h1 { margin-top: 22px; }
+  .wb-intro-edge { margin-top: 22px; }
+  .wb-intro-edge span { padding: 7px 12px; font-size: 11px; }
+  .wb-bento-profile { min-height: 360px; }
+  .wb-bento-service { min-height: 265px; }
+  .wb-bento-shop, .wb-bento-about { min-height: 330px; }
+  .wb-bento-contact { min-height: 330px; }
+  .wb-bento-contact .wb-contact-button { right: 24px; bottom: 24px; width: 98px; }
+  .wb-card-illustration { width: 122px; height: 88px; right: 18px; bottom: 18px; }
+  .wb-shopify-logo { width: 108px; height: 108px; }
+  .wb-bento-service h2 { font-size: 41px; }
+  .wb-service-cro h2, .wb-service-cro p, .wb-service-shopify h2, .wb-service-shopify p, .wb-service-wolf h2, .wb-service-wolf p { max-width: calc(100% - 134px); }
+  .wb-bento-shop h2, .wb-bento-shop p { max-width: calc(100% - 156px); }
+  .wb-service-wolf .wb-card-illustration { width: 98px; height: 74px; }
+  .wb-shop-illustration { width: 142px; height: 112px; }
+  .wb-bento-about h2 { max-width: 100%; margin: 18px 0 16px; }
+  .wb-bento-contact h2 { max-width: 100%; }
+  .wb-bento-stats { grid-column: 1; grid-template-columns: 1fr; gap: 10px; }
+  .wb-stats-intro { display: block; }
+  .wb-stats-intro p { margin-top: 12px; font-size: 27px; }
+  .wb-stat-card { min-height: 130px; }
+  .wb-bento-blog, .wb-bento-direct, .wb-bento-analysis { grid-column: 1; min-height: 320px; }
+  .wb-bento-blog h2 { font-size: 44px; }
+  .wb-bento-direct h2 { font-size: 44px; }
+  .wb-home-contact-list { grid-template-columns: 1fr; }
+  .wb-post-list { gap: 7px; }
+  .wb-post { min-height: 90px; padding: 12px; }
+  .wb-post span { font-size: 19px; }
+  .wb-footer .wb-footer-bottom { flex-direction: column; }
+  .wb-contact-main { padding-top: 12px; }
+  .wb-contact-top { display: block; padding: 24px 20px; }
+  .wb-contact-top h1 { font-size: 38px; }
+  .wb-diagnosis-facts { justify-content: flex-start; margin-top: 16px; }
+  .wb-contact-content { grid-template-columns: 1fr; }
+  .wb-diagnosis-form-wrap { padding: 28px 24px; }
+  .wb-form-heading { gap: 16px; margin-bottom: 26px; }
+  .wb-form-avatar { width: 64px; height: 64px; }
+  .wb-form-heading h2 { font-size: 36px; }
+  .wb-field-row { grid-template-columns: 1fr; }
+  .wb-focus-options { flex-wrap: wrap; }
+  .wb-submit-button { width: 100%; }
+  .wb-next-step { min-height: 280px; padding: 28px 24px; }
+  .wb-next-step h2 { margin-top: 58px; font-size: 36px; }
+  .wb-direct-contact { padding: 28px 24px; }
+  .wb-cro-main { padding-top: 14px; }
+  .wb-cro-back { margin-bottom: 14px; }
+  .wb-cro-hero { min-height: 520px; padding: 28px 24px; }
+  .wb-cro-hero h1 { margin-top: 64px; font-size: 54px; }
+  .wb-cro-hero > p { font-size: 16px; }
+  .wb-cro-hero-actions { display: grid; }
+  .wb-cro-primary-link { width: fit-content; }
+  .wb-cro-hero-mark { right: 10px; bottom: -20px; font-size: 180px; }
+  .wb-cro-split { grid-template-columns: 1fr; gap: 10px; margin-top: 10px; }
+  .wb-cro-problem, .wb-cro-solution { min-height: 390px; padding: 28px 24px; }
+  .wb-cro-problem h2, .wb-cro-solution h2 { margin-top: 62px; font-size: 43px; }
+  .wb-cro-process, .wb-cro-references, .wb-cro-pricing, .wb-cro-faq { padding: 58px 0; }
+  .wb-cro-section-heading { display: block; margin-bottom: 28px; }
+  .wb-cro-section-heading h2 { font-size: 46px; }
+  .wb-cro-section-heading > p { margin-top: 20px; }
+  .wb-cro-process-grid { grid-template-columns: 1fr; }
+  .wb-cro-process-grid li { min-height: 215px; }
+  .wb-cro-process-grid li > svg { margin: 28px 0 18px; }
+  .wb-cro-testing { grid-template-columns: 1fr; align-items: start; padding: 28px 24px; }
+  .wb-cro-testing h3 { font-size: 36px; }
+  .wb-cro-testing > span { width: fit-content; }
+  .wb-cro-logo-grid { grid-template-columns: 1fr 1fr; }
+  .wb-cro-logo-grid > div { min-height: 105px; }
+  .wb-cro-pricing-grid { grid-template-columns: 1fr; gap: 10px; }
+  .wb-cro-price-card { min-height: 480px; padding: 26px 24px; }
+  .wb-cro-price-card h3 { margin-top: 45px; }
+  .wb-cro-faq summary { font-size: 15px; }
+  .wb-cro-final-cta { min-height: 370px; padding: 28px 24px; }
+  .wb-cro-final-cta h2 { margin: 64px 0 0; font-size: 50px; }
+  .wb-cro-final-cta > a { right: 24px; bottom: 24px; width: 106px; }
+  .wb-shopify-hero-logo { right: 18px; bottom: 18px; width: 110px; height: 110px; }
+  .wb-shopify-service-grid { grid-template-columns: 1fr; }
+  .wb-shopify-service-grid article { min-height: 215px; }
+  .wb-shopify-service-grid article > svg { margin: 28px 0 18px; }
+  .wb-legal-header h1 { font-size: 44px; }
+  .wb-legal-grid { grid-template-columns: 1fr; }
+  .wb-legal-card { padding: 26px 24px; }
+  .wb-legal-card.wb-legal-full { grid-column: 1; }
+  .wb-legal-card h2 { font-size: 26px; }
+}
