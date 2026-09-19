@@ -84,7 +84,7 @@ function Datenschutz() {
           <section className="wb-legal-card" aria-labelledby="privacy-contact">
             <h2 id="privacy-contact">Kontaktformular</h2>
             <p>
-              Wenn das Kontaktformular aktiviert ist, werden die eingegebenen Daten ausschließlich zur Bearbeitung deiner Anfrage verwendet. Eine Weitergabe an Dritte erfolgt nicht, soweit nicht für die technische Verarbeitung erforderlich.
+              Die im Kontaktformular eingegebenen Daten werden ausschließlich zur Bearbeitung deiner Anfrage verwendet. Die Verarbeitung erfolgt technisch über ein Google Apps Script: Deine Angaben werden dabei in einem Google Sheet gespeichert und per E-Mail an mich weitergeleitet. Eine darüber hinausgehende Weitergabe an Dritte erfolgt nicht.
             </p>
           </section>
 
