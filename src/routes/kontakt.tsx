@@ -11,7 +11,8 @@ const GITHUB = "https://github.com/william-baitz99";
 const EMAIL = "info@william-baitz.de";
 
 // Google Apps Script Web App /exec URL. Paste it here once deployed to activate the form.
-const FORM_ENDPOINT = "";
+const FORM_ENDPOINT =
+  "https://script.google.com/macros/s/AKfycbyW9Xk-ammC78gNIY2rZpfUocbj-qcIL75s1NNHmS3Itgg5czqdFNKiuUwwn8i_fmSWqQ/exec";
 
 export const Route = createFileRoute("/kontakt")({
   head: () => ({
