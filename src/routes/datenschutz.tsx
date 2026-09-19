@@ -2,7 +2,7 @@ import { Link, createFileRoute } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import "../william.css";
 
-const LINKEDIN = "https://www.linkedin.com/in/william-baitz-06233b196/";
+const EMAIL = "info@william-baitz.de";
 
 export const Route = createFileRoute("/datenschutz")({
   head: () => ({
@@ -63,8 +63,7 @@ function Datenschutz() {
               <br />
               Al Jazeera Al Hamra
               <br />
-              E-Mail:{" "}
-              <span className="wb-legal-placeholder">Noch einzutragen</span>
+              E-Mail: <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
             </p>
           </section>
 

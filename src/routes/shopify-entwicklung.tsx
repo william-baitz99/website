@@ -8,7 +8,9 @@ import {
   CircleAlert,
   Code2,
   Gauge,
+  Github,
   LayoutTemplate,
+  Linkedin,
   Plug,
   Sparkles,
   Wrench,
@@ -16,6 +18,7 @@ import {
 import "../william.css";
 
 const LINKEDIN = "https://www.linkedin.com/in/william-baitz-06233b196/";
+const GITHUB = "https://github.com/william-baitz99";
 
 const developmentSteps = [
   {
@@ -264,7 +267,8 @@ function ShopifyEntwicklung() {
             <span>© 2026 William Baitz</span>
             <div>
               <Link to="/">Startseite</Link>
-              <a href={LINKEDIN} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href={LINKEDIN} target="_blank" rel="noopener noreferrer"><Linkedin aria-hidden="true" /> LinkedIn</a>
+              <a href={GITHUB} target="_blank" rel="noopener noreferrer"><Github aria-hidden="true" /> GitHub</a>
               <Link to="/impressum">Impressum</Link>
               <Link to="/datenschutz">Datenschutz</Link>
             </div>

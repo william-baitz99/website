@@ -1,10 +1,12 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
-import { Clock3, Linkedin, Mail } from "lucide-react";
+import { Clock3, Github, Linkedin, Mail } from "lucide-react";
 import "../william.css";
 
 const portraitPhoto = { url: "/william-baitz-portrait.webp" };
 
 const LINKEDIN = "https://www.linkedin.com/in/william-baitz-06233b196/";
+const GITHUB = "https://github.com/william-baitz99";
+const EMAIL = "info@william-baitz.de";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -175,24 +177,23 @@ function Index() {
             </ol>
           </section>
 
-          <section className="wb-bento-card wb-bento-analysis" aria-labelledby="analysis-heading">
+          <Link className="wb-bento-card wb-bento-analysis" to="/kontakt" aria-label="Shop-Check per Loom – Ablauf und Kontakt">
             <div className="wb-eyebrow">Ersteinschätzung</div>
-            <h2 id="analysis-heading">Shop-Check per Loom</h2>
+            <h2>Shop-Check per Loom</h2>
             <p>Auf Wunsch gebe ich in einem kurzen Loom-Video erste Hinweise zu CRO und SEO.</p>
-            <Link className="wb-analysis-link" to="/kontakt">
-              Ablauf und Kontakt ↗
-            </Link>
+            <span className="wb-analysis-link">Ablauf und Kontakt ↗</span>
             <span className="wb-analysis-mark" aria-hidden="true">
               ↗
             </span>
-          </section>
+          </Link>
 
           <section className="wb-bento-card wb-bento-direct" aria-labelledby="direct-contact-heading">
             <div className="wb-eyebrow">Direkter Kontakt</div>
             <h2 id="direct-contact-heading">Kontakt und Projektanfragen.</h2>
             <div className="wb-home-contact-list">
-              <a className="is-placeholder" aria-disabled="true"><Mail aria-hidden="true" /><span><small>E-Mail</small>Noch einzutragen</span></a>
+              <a href={`mailto:${EMAIL}`}><Mail aria-hidden="true" /><span><small>E-Mail</small>{EMAIL}</span></a>
               <a href={LINKEDIN} target="_blank" rel="noopener noreferrer"><Linkedin aria-hidden="true" /><span><small>LinkedIn</small>William Baitz</span></a>
+              <a href={GITHUB} target="_blank" rel="noopener noreferrer"><Github aria-hidden="true" /><span><small>GitHub</small>william-baitz99</span></a>
               <a className="is-placeholder" aria-disabled="true"><Clock3 aria-hidden="true" /><span><small>Calendly</small>Noch einzutragen</span></a>
             </div>
           </section>
@@ -206,7 +207,10 @@ function Index() {
             <span>© 2026 William Baitz</span>
             <div>
               <a href={LINKEDIN} target="_blank" rel="noopener noreferrer">
-                LinkedIn
+                <Linkedin aria-hidden="true" /> LinkedIn
+              </a>
+              <a href={GITHUB} target="_blank" rel="noopener noreferrer">
+                <Github aria-hidden="true" /> GitHub
               </a>
               <Link to="/impressum">Impressum</Link>
               <Link to="/datenschutz">Datenschutz</Link>

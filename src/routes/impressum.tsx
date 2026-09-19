@@ -1,8 +1,10 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Github, Linkedin } from "lucide-react";
 import "../william.css";
 
 const LINKEDIN = "https://www.linkedin.com/in/william-baitz-06233b196/";
+const GITHUB = "https://github.com/william-baitz99";
+const EMAIL = "info@william-baitz.de";
 
 export const Route = createFileRoute("/impressum")({
   head: () => ({
@@ -68,11 +70,16 @@ function Impressum() {
           <section className="wb-legal-card" aria-labelledby="impressum-contact">
             <h2 id="impressum-contact">Kontakt</h2>
             <p>
-              E-Mail: <span className="wb-legal-placeholder">Noch einzutragen</span>
+              E-Mail: <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
               <br />
               LinkedIn:{" "}
               <a href={LINKEDIN} target="_blank" rel="noopener noreferrer">
-                William Baitz
+                <Linkedin aria-hidden="true" /> William Baitz
+              </a>
+              <br />
+              GitHub:{" "}
+              <a href={GITHUB} target="_blank" rel="noopener noreferrer">
+                <Github aria-hidden="true" /> william-baitz99
               </a>
             </p>
           </section>
@@ -80,7 +87,7 @@ function Impressum() {
           <section className="wb-legal-card wb-legal-full" aria-labelledby="impressum-note">
             <h2 id="impressum-note">Hinweis</h2>
             <p>
-              Diese Website dient der beruflichen Selbstdarstellung. Die Angaben wurden nach bestem Wissen erstellt. E-Mail-Adresse und Telefonnummer werden ergänzt, sobald die finalen Kontaktdaten feststehen.
+              Diese Website dient der beruflichen Selbstdarstellung. Die Angaben wurden nach bestem Wissen erstellt. Die Telefonnummer wird ergänzt, sobald sie feststeht.
             </p>
           </section>
         </div>

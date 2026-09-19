@@ -1,11 +1,13 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
-import { ArrowLeft, ArrowUpRight, Check, Clock3, Linkedin, Mail } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Check, Clock3, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import "../william.css";
 
 const portraitPhoto = { url: "/william-baitz-portrait.webp" };
 
 const LINKEDIN = "https://www.linkedin.com/in/william-baitz-06233b196/";
+const GITHUB = "https://github.com/william-baitz99";
+const EMAIL = "info@william-baitz.de";
 
 export const Route = createFileRoute("/kontakt")({
   head: () => ({
@@ -126,8 +128,9 @@ function Kontakt() {
             </div>
             <div className="wb-direct-contact">
               <div className="wb-eyebrow">Direkter Kontakt</div>
-              <a className="is-placeholder" aria-disabled="true"><Mail aria-hidden="true" /><span><small>E-Mail</small>Noch einzutragen</span></a>
+              <a href={`mailto:${EMAIL}`}><Mail aria-hidden="true" /><span><small>E-Mail</small>{EMAIL}</span></a>
               <a href={LINKEDIN} target="_blank" rel="noopener noreferrer"><Linkedin aria-hidden="true" /><span><small>LinkedIn</small>William Baitz</span></a>
+              <a href={GITHUB} target="_blank" rel="noopener noreferrer"><Github aria-hidden="true" /><span><small>GitHub</small>william-baitz99</span></a>
               <a className="is-placeholder" aria-disabled="true"><Clock3 aria-hidden="true" /><span><small>Calendly</small>Noch einzutragen</span></a>
             </div>
           </aside>
