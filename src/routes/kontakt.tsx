@@ -1,5 +1,6 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
 import { ArrowLeft, ArrowUpRight, Check, Clock3, Github, Linkedin, Mail } from "lucide-react";
+import { useState, type FormEvent } from "react";
 import { Button } from "@/components/ui/button";
 import "../william.css";
 
@@ -8,6 +9,9 @@ const portraitPhoto = { url: "/william-baitz-portrait.webp" };
 const LINKEDIN = "https://www.linkedin.com/in/william-baitz-06233b196/";
 const GITHUB = "https://github.com/william-baitz99";
 const EMAIL = "info@william-baitz.de";
+
+// Google Apps Script Web App /exec URL. Paste it here once deployed to activate the form.
+const FORM_ENDPOINT = "";
 
 export const Route = createFileRoute("/kontakt")({
   head: () => ({
@@ -37,7 +41,41 @@ export const Route = createFileRoute("/kontakt")({
   component: Kontakt,
 });
 
+type FormStatus = "idle" | "submitting" | "success" | "error";
+
 function Kontakt() {
+  const [status, setStatus] = useState<FormStatus>("idle");
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (!FORM_ENDPOINT) return;
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const payload = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      shopUrl: formData.get("shopUrl"),
+      focus: formData.getAll("focus"),
+      message: formData.get("message"),
+    };
+
+    setStatus("submitting");
+    try {
+      // Apps Script Web Apps don't send CORS headers, so the response is
+      // opaque here — a resolved promise only rules out a network failure,
+      // not a server-side error. That's an accepted trade-off of this setup.
+      await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        mode: "no-cors",
+        body: JSON.stringify(payload),
+      });
+      form.reset();
+      setStatus("success");
+    } catch {
+      setStatus("error");
+    }
+  }
+
   return (
     <div className="wb-page wb-contact-page">
       <header className="wb-header">
@@ -82,7 +120,7 @@ function Kontakt() {
                 <h2 id="diagnose-form-heading">Worum geht es?</h2>
               </div>
             </div>
-            <form className="wb-diagnosis-form" onSubmit={(event) => event.preventDefault()}>
+            <form className="wb-diagnosis-form" onSubmit={handleSubmit}>
               <div className="wb-field-row">
                 <label>
                   Dein Name
@@ -113,10 +151,31 @@ function Kontakt() {
                 <input type="checkbox" required />
                 <span>Ich stimme zu, dass meine Angaben zur Bearbeitung der Anfrage verarbeitet werden.</span>
               </label>
-              <Button className="wb-submit-button" type="submit" disabled>
-                Anfrage senden <ArrowUpRight aria-hidden="true" />
+              <Button
+                className="wb-submit-button"
+                type="submit"
+                disabled={!FORM_ENDPOINT || status === "submitting"}
+              >
+                {status === "submitting" ? (
+                  "Wird gesendet …"
+                ) : (
+                  <>
+                    Anfrage senden <ArrowUpRight aria-hidden="true" />
+                  </>
+                )}
               </Button>
-              <p className="wb-form-note">Das Formular wird freigeschaltet, sobald Google Sheets verbunden ist.</p>
+              {!FORM_ENDPOINT && (
+                <p className="wb-form-note">Das Formular wird freigeschaltet, sobald Google Sheets verbunden ist.</p>
+              )}
+              {status === "success" && (
+                <p className="wb-form-note">Danke für deine Anfrage! Ich melde mich zeitnah zurück.</p>
+              )}
+              {status === "error" && (
+                <p className="wb-form-note">
+                  Da ist etwas schiefgelaufen. Schreib mir gerne direkt an{" "}
+                  <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.
+                </p>
+              )}
             </form>
           </div>
 
