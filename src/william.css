@@ -61,11 +61,11 @@
 .wb-service-cro p { max-width: 56%; }
 .wb-service-shopify h2 { max-width: 63%; }
 .wb-service-shopify p { max-width: 54%; }
-.wb-service-cro { grid-column: span 5; color: var(--ink); background: var(--lime); }
+.wb-bento-card.wb-service-cro { grid-column: span 5; color: var(--ink); background: var(--lime); }
 .wb-service-cro .wb-card-arrow { color: var(--paper); background: var(--ink); }
-.wb-service-shopify { grid-column: span 4; color: var(--paper); background: var(--rose); }
+.wb-bento-card.wb-service-shopify { grid-column: span 4; color: var(--paper); background: var(--rose); }
 .wb-service-shopify .wb-card-arrow { color: var(--ink); background: var(--paper); }
-.wb-service-wolf { grid-column: span 3; color: var(--ink); background: var(--soft); }
+.wb-bento-card.wb-service-wolf { grid-column: span 3; color: var(--ink); background: var(--soft); }
 .wb-service-wolf h2 { max-width: 100%; }
 .wb-service-wolf p { max-width: calc(100% - 118px); }
 .wb-service-wolf .wb-card-illustration { width: 108px; height: 82px; }
@@ -121,7 +121,7 @@
 .wb-home-contact-list small { color: rgba(244, 240, 232, 0.58); font: 400 10px/1 "DM Mono", monospace; }
 .wb-home-contact-list .is-placeholder { cursor: default; color: rgba(244, 240, 232, 0.52); }
 
-.wb-bento-analysis { grid-column: span 8; min-height: 336px; color: var(--paper); background: var(--pine); }
+.wb-bento-card.wb-bento-analysis { grid-column: span 8; min-height: 336px; color: var(--paper); background: var(--pine); }
 .wb-bento-analysis h2 { max-width: 520px; margin: auto 0 12px; font: 400 58px/0.94 "Instrument Serif", Georgia, serif; letter-spacing: -0.04em; }
 .wb-bento-analysis p { max-width: 480px; margin: 0; color: rgba(244, 240, 232, 0.8); font-size: 15px; line-height: 1.45; }
 .wb-analysis-link { margin-top: 24px; color: var(--lime); font-size: 15px; font-weight: 600; position: relative; z-index: 1; }
