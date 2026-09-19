@@ -1,7 +1,8 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
 import { Clock3, Linkedin, Mail } from "lucide-react";
-import portraitPhoto from "@/assets/william-baitz-portrait.jpg.asset.json";
 import "../william.css";
+
+const portraitPhoto = { url: "/william-baitz-portrait.webp" };
 
 const LINKEDIN = "https://www.linkedin.com/in/william-baitz-06233b196/";
 
